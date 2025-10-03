@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #000;
+    font-family: "Merriweather", serif;
+}
+
+.background{
+    position: relative;
+    background: linear-gradient(170deg, #f5f57b 35%, #fff6fb 100%);
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    flex: 1;
+    color: #600081;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 70px;
+    margin-right: 1%;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    font-family: "Ubuntu", serif;
+    background-color: #f5f57b;
+}
+
+/* .navbar.scrolled{
+    background-color: #fff066;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+} Dont like this shit, IDK what this does */
+
+.nav-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-items li{
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav-items li a{
+    text-decoration: none;
+    font-size: 16px;  /* default font-size is already 16px (for chrome at least) */
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.nav-items li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #64009e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-items li:hover::after{
+    width: 100%;
+}
+
+.nav-menu{
+    display: none;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    width: 90%;
+    padding: 10em 2em 4em 2em;
+    margin: auto;
+}
+
+.main h1{
+    font-size: 3.5em;
+    color: #473829;
+    line-height: 1.5;
+    padding: 2% 0%;
+}
+
+.left h3{
+    font-size: 20px;
+    color: #555;
+}
+
+.left p{
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 4% 0;
+    color: #555;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    width: 650px;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn{
+    padding: 12px 25px;
+    background-color: #ffe400;
+    color: #600081;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 2px solid #000;
+    transition: background-color 0.35s linear;
+}
+
+.btn:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color: #000;
+}
+
+/* __________________________Features */
+
+.sec{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 9em 0 3em 0;
+}
+
+.heading{
+    color: #600081;
+    font-size: 3em;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+}
+
+.para{
+    font-size: 14px;
+    color: #555;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6em;
+}
+
+.boxes{
+    max-width: 100%;
+    margin: auto 1em;
+    padding: 25px;
+    background-color: #fff7b4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sub-heading{
+    padding-bottom: 13px;
+}
+
+.para-1{
+    font-size: 13px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.boxes h2{
+    margin-top: 1em;
+}
+
+.boxes i{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 2em;
+    background-color: #64009e;
+    padding: 20px;
+    border-radius: 50%;
+    color: #fff066;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s linear;
+    border: 10px double #ffe400;
+    cursor: pointer;
+}
+
+/* .boxes:hover i{
+    border: 10px double #ffe400;
+    transform: translate(-50%, -50%) rotateY(40deg);
+} I don't like this shit */
+
+/* ______________________________About */
+
+.about-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.about-box li{
+    list-style: none;
+}
+
+.left-box, .right-box{
+    text-align: left;
+}
+
+.mid img{
+    width: 400px;
+    border-radius: 10px;
+}
+
+.left-box li, .right-box li{
+    padding: 14px 0;
+}
+
+.left-box li i,
+.right-box li i{
+    color: #fff;
+    padding: 1px;
+    background: linear-gradient(to bottom, #c402ff, #c5a800);
+    border-radius: 50%;
+    margin-right: 12px;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* I didn't get what I wanted even after try, but at least this is better than it used to be */
+}
+
+.btn1{
+    margin-top: 12px;
+    background-color: #fff066;
+}
+
+/* ______________________________ Blog */
+.blog{
+    width: 100%;
+    background-color: #fef183;
+    padding: 5em 0;
+    margin: 2em 0;
+}
+
+.b-blog{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 4em;
+
+    margin: auto;
+}
+
+.blog-box h1{
+    padding: 12px 0;
+    font-size: 2.7em;
+}
+
+/* ______________________________ Contact */
+.box-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3em;
+}
+
+.contact-left, .contact-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.contact-left input,
+.contact-left textarea{
+    padding: 15px;
+    outline: none;
+    background-color: #fcffe7;
+    border: 2px solid #600081;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+.contact-left input{
+    margin: 2% 0;
+}
+
+.contact-right img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ______________________________ Footer */
+footer{
+    background-color: #f5f57b;
+    margin-top: 7em;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem 2rem;
+    width: 80%;
+    margin-bottom: 3em;
+    text-align: left;
+}
+
+.footer-logo img{
+    max-width: 40px;
+}
+
+.footer-logo span{
+    display: flex;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.footer-col h4{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #600081;
+}
+
+.footer-links{
+    display: grid;
+    gap: 1rem;
+    list-style: none;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #473829;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover{
+    color: #c5a900;
+}
+
+.footer-text{
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.footer-socials{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-socials a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 4%;
+    background-color: #600081;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-socials a:hover{
+    background-color: #c402ff;
+    color: #f5f57b;
+}
+
+.footer-bar{
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar .nav-items li{
+        display: none;
+    }
+    /* .main{
+        padding: 4em 0em 4em 1em;
+    } */
+    .main .right{
+        display: none;
+    }
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+    .box, .about-box{
+        grid-template-columns: 1fr;
+    }
+    .boxes{
+        margin: 2em auto;
+    }
+    .b-blog{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .main .right{
+        display: none;
+    }
+    .main .left{
+        width: 100%;
+    }
+    .main .left h1{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .contact-right{
+        display: none;
+    }
+    .contact-left{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        width: 100%;
+    }
+}
